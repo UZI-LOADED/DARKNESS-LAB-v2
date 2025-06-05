@@ -1,11 +1,11 @@
 #!/bin/bash
-echo "[+] Creating .env"
-echo "SECRET_KEY=InitSecretKey123456" > ../config/app_config.env
+echo "[+] Deploying Extended Darkness Lab..."
 
-echo "[+] Launching Defender"
+mkdir -p ../config
+echo "SECRET_KEY=$(openssl rand -hex 32)" > ../config/app_config.env
+
+echo "[+] Starting File Guardian..."
 python3 ../defender/file_hash_guardian.py &
 
-echo "[+] Launching Monitor"
-python3 ../monitor/realtime_audit_tui.py &
-
-echo "[+] Ready. Begin testing injectors and encryptors manually."
+echo "[+] Launching Real-Time Monitor..."
+python3 ../monitor/realtime_audit_tui.py
