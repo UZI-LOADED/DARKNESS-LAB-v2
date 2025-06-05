@@ -1,0 +1,19 @@
+extended_darkness_lab/
+├── config/
+│   └── app_config.env
+├── encryptor/
+│   └── encrypt_note.py
+├── injector/
+│   └── inject_backdoor_key.py
+├── defender/
+│   ├── tripwire_barlogger.py
+│   └── file_hash_guardian.py
+├── monitor/
+│   └── realtime_audit_tui.py
+├── beacon/
+│   └── encrypted_beacon_client.py
+│   └── encrypted_beacon_server.py
+├── api_guard/
+│   └── rogue_key_logger.py
+├── deploy/
+│   └── deploy_all.sh
